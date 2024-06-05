@@ -1,5 +1,6 @@
 # balenaSound-yahboom_custom
 balenaSound + YAHBOOM Raspberry Pi RGB cooling HAT
+
 based on balena-io-experimental/balena-sound (3.10.0) and yahboom-rpi4b-hat-balena (0.0.1)
 
 ## Setup and configuration
