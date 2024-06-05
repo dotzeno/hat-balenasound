@@ -1,0 +1,12 @@
+name: balenasound-yahboom_custom
+type: sw.application
+joinable: false
+description: >-
+  This is based on balena python hello world
+post-provisioning: >-
+  ## Usage instructions
+
+data:
+  supportedDeviceTypes:
+    - raspberrypi4-64
+version: 0.0.1
