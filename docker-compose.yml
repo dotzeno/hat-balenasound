@@ -5,8 +5,8 @@ volumes:
   snapcast:
 
 services:
-  yahboom-hat:
-    build: ./yahboom-rpi4b-hat-balena
+  rpi-hat:
+    build: ./rpi-hat-balena
     network_mode: host
     devices:
       - "/dev/i2c-1:/dev/i2c-1"
@@ -46,22 +46,22 @@ services:
   # Plugins
   # -- Additional plugins can be added. See https://balena-sound.pages.dev/plugins
   # -- Remove unwanted plugins as needed
-  bluetooth:
-    build: ./balena-sound-master/plugins/bluetooth
-    restart: on-failure
-    network_mode: host
-    cap_add:
-      - NET_ADMIN
-    labels:
-      io.balena.features.dbus: 1
+  # bluetooth:
+    # build: ./balena-sound-master/plugins/bluetooth
+    # restart: on-failure
+    # network_mode: host
+    # cap_add:
+      # - NET_ADMIN
+    # labels:
+      # io.balena.features.dbus: 1
 
-  airplay:
-    build: ./balena-sound-master/plugins/airplay
-    restart: on-failure
-    network_mode: host
-    privileged: true
-    labels:
-      io.balena.features.dbus: 1
+  # airplay:
+    # build: ./balena-sound-master/plugins/airplay
+    # restart: on-failure
+    # network_mode: host
+    # privileged: true
+    # labels:
+      # io.balena.features.dbus: 1
 
   spotify:
     build: ./balena-sound-master/plugins/spotify
