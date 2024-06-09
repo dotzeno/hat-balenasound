@@ -1,4 +1,0 @@
-Pillow
-adafruit-circuitpython-ssd1306
-RPi.GPIO
-smbus
