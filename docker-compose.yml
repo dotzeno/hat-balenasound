@@ -5,8 +5,21 @@ volumes:
   snapcast:
 
 services:
-  rpi-hat:
-    build: ./rpi-hat-balena
+  rpi-hat-rgb:
+    build: ./rpi-hat-balena/core/rgb
+    restart: on-failure
+    devices:
+      - "/dev/i2c-1:/dev/i2c-1"
+      
+  rpi-hat-fan:
+    build: ./rpi-hat-balena/core/fan
+    restart: always
+    devices:
+      - "/dev/i2c-1:/dev/i2c-1"
+  
+  rpi-hat-oled:
+    build: ./rpi-hat-balena/core/oled
+    restart: no
     network_mode: host
     devices:
       - "/dev/i2c-1:/dev/i2c-1"
